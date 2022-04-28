@@ -55,7 +55,7 @@ ol {
   margin-bottom: 0;
 }
 
-.link {
+a {
   text-decoration: none;
 }
 
@@ -110,7 +110,7 @@ ol {
   color: var(--accent-color);
 }
 
-span.accent {
+.logo__accent {
   color: var(--accent-color);
 }
 
@@ -126,17 +126,14 @@ span.accent {
   margin-left: 93px;
 }
 
-.site-nav .item + .item {
+.site-nav__item + .site-nav__item {
   margin-left: 50px;
 }
 
-.page-header .link {
+.site-nav__link {
   display: block;
   padding-top: 24px;
   padding-bottom: 25px;
-}
-
-.site-nav .link {
   padding: 32px 0;
   color: var(--title-text-color);
   font-weight: 500;
@@ -147,17 +144,17 @@ span.accent {
   transition: color 250ms var(--timing-function);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav__link:hover,
+.site-nav__link:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.site-nav__link--current {
   position: relative;
   color: var(--accent-color);
 }
 
-.site-nav .link.current::after {
+.site-nav__link--current::after {
   position: absolute;
   bottom: -1px;
   display: block;
@@ -176,11 +173,11 @@ span.accent {
   margin-left: auto;
 }
 
-.contacts .item + .item {
+.contacts__item + .contacts__item {
   margin-left: 50px;
 }
 
-.contacts .link {
+.contacts__link {
   display: flex;
   padding: 32px 0;
 
@@ -193,17 +190,17 @@ span.accent {
   transition: color 250ms var(--timing-function);
 }
 
-.contacts .link:hover,
-.contacts .link:focus {
+.contacts__link:hover,
+.contacts__link:focus {
   color: var(--accent-color);
 }
 
-.contacts .link:hover .contacts-icon,
-.contacts .link:focus .contacts-icon {
+.contacts__link:hover .contacts__icon,
+.contacts__link:focus .contacts__icon {
   fill: var(--accent-color);
 }
 
-.contacts-icon {
+.contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 
@@ -233,7 +230,7 @@ span.accent {
   background-color: var(--footer-color);
 }
 
-.hero-title {
+.hero__title {
   width: 696px;
   margin: 0 auto 30px auto;
   color: var(--primary-white-color);
@@ -244,15 +241,15 @@ span.accent {
   text-transform: uppercase;
 }
 
-.hero .button {
+.button {
   display: inline-block;
   border-radius: 4px;
   padding: 10px 32px;
   min-width: 200px;
 
+  background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--primary-white-color);
-  background-color: var(--accent-color);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -261,10 +258,9 @@ span.accent {
   text-align: center;
   letter-spacing: 0.06em;
 }
-
 /* advantage */
 
-.section-title {
+.section__title {
   margin-bottom: 50px;
 
   color: var(--title-text-color);
@@ -280,15 +276,15 @@ span.accent {
   flex-wrap: wrap;
 }
 
-.advantage-list .item {
+.advantage-list__item {
   width: 270px;
 }
 
-.advantage-list .item:not(:last-child) {
+.advantage-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.advantage-list .title {
+.advantage-list__title {
   margin-bottom: 10px;
 
   color: var(--title-text-color);
@@ -299,7 +295,7 @@ span.accent {
   text-transform: uppercase;
 }
 
-.advantage-icon {
+.advantage-list__wrap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -311,7 +307,7 @@ span.accent {
 
 /* work-list */
 
-.work {
+.section--work {
   padding-top: 0;
 }
 
@@ -320,15 +316,15 @@ span.accent {
   flex-wrap: wrap;
 }
 
-.work-list .item {
+.work-list__item {
   position: relative;
 }
 
-.work-list .item:not(:last-child) {
+.work-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.work-list .title {
+.work-list__title {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -349,7 +345,7 @@ span.accent {
 
 /* team */
 
-.team {
+.section--team {
   background-color: var(--secondary-bg-color);
 }
 
@@ -358,7 +354,7 @@ span.accent {
   flex-wrap: wrap;
 }
 
-.team-list .item {
+.team-list__item {
   margin-right: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -366,17 +362,17 @@ span.accent {
   background-color: var(--primary-white-color);
 }
 
-.team-list .item:last-child {
+.team-list__item:last-child {
   margin-right: 0;
 }
 
-.item-content {
+.team-list__content {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: var(--primary-white-color);
 }
 
-.team-list .title {
+.team-list__title {
   margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 500;
@@ -385,7 +381,7 @@ span.accent {
   text-align: center;
 }
 
-.team-list .text {
+.team-list__text {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -397,21 +393,21 @@ span.accent {
   margin-top: 16px;
 }
 
-.social-item .link:hover .icon,
-.social-item .link:focus .icon {
+.social-items__link:hover .social-items__icon,
+.social-items__link:focus .social-items__icon {
   fill: var(--primary-white-color);
 }
 
-.social-item .link:hover,
-.social-item .link:focus {
+.social-items__link:hover,
+.social-items__link:focus {
   background-color: var(--accent-color);
 }
 
-.social-items .social-item + .social-item {
+.social-items__item + .social-items__item {
   margin-left: 10px;
 }
 
-.social-items .link {
+.social-items__link {
   display: block;
   width: 44px;
   height: 44px;
@@ -422,7 +418,7 @@ span.accent {
   transition: background-color 250ms var(--timing-function);
 }
 
-.social-items .icon {
+.social-items__icon {
   fill: var(--social-icon-color);
 
   transition: fill 250ms var(--timing-function);
@@ -434,11 +430,11 @@ span.accent {
   display: flex;
 }
 
-.client-item + .client-item {
+.client-list__item + .client-list__item {
   margin-left: 30px;
 }
 
-.link-client {
+.client-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -451,19 +447,19 @@ span.accent {
   transition: border-color 250ms var(--timing-function);
 }
 
-.icon-client {
+.client-list__icon {
   fill: var(--social-link-color);
 
   transition: fill 250ms var(--timing-function);
 }
 
-.link-client:hover,
-.link-client:focus {
+.client-list__link:hover,
+.client-list__link:focus {
   border: 1px solid var(--accent-color);
 }
 
-.link-client:hover .icon-client,
-.link-client:focus .icon-client {
+.client-list__link:hover .client-list__icon,
+.client-list__link:focus .client-list__icon {
   fill: var(--accent-color);
 }
 
@@ -481,7 +477,8 @@ span.accent {
   margin-left: 8px;
 }
 
-.button {
+.filter__button {
+  display: inline-block;
   padding: 6px 22px;
 
   color: var(--title-text-color);
