@@ -91,7 +91,7 @@ a {
   border-bottom: 1px solid #ececec;
 }
 
-.page-header .container {
+.container--header {
   display: flex;
 }
 
